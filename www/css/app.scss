@@ -1,0 +1,70 @@
+/* Colors */
+$grayDark: #333;
+
+/* Document */
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+html {
+  font-size: 1em;
+}
+body {
+  -webkit-touch-callout: none;        /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;     /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;          /* prevent copy paste, to allow, change 'none' to 'text' */
+  -ms-text-size-adjust: 100%;         /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  color: $grayDark;
+  font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;  
+}
+
+/* Global Elements */
+a {
+  background: transparent;
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+img {
+  border: 0;
+}
+
+/* App */
+#app {
+  display: none;
+  &.loaded {
+    display: block;
+  } 
+}
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) {
+
+}
+
+
+/* Mixins */
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
