@@ -36,6 +36,14 @@ img {
   border: 0;
 }
 
+/* App */
+#app {
+  display: none;
+}
+#app.loaded {
+  display: block;
+}
+
 /* Portrait */
 @media screen and (orientation:portrait) {
 

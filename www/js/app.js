@@ -31,6 +31,7 @@
     App.prototype.onDeviceReady = function(){
       this.options.debug && console.log('Device Ready!');
       
+      $('#app').addClass('loaded');
       
     };
 
@@ -40,7 +41,7 @@
 
   $(function() {
     return new App({
-      debug: true
+      debug: false
     });
   });
 
