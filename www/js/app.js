@@ -40,9 +40,7 @@
   })();
 
   $(function() {
-    return new App({
-      debug: false
-    });
+    return new App(config);
   });
 
 }).call(this);
