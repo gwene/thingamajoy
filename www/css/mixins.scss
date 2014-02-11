@@ -1,0 +1,32 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin opacity($opacity: 0.5) {
+  filter:         alpha(opacity=($opacity * 100));
+  -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($opacity * 100) + ")";
+  -moz-opacity:   $opacity;
+  -khtml-opacity: $opacity;
+  opacity:        $opacity;
+}
+
+@mixin transform($params) {
+  -webkit-transform: $params;
+  -moz-transform:    $params;
+  transform:         $params;
+}
+
+@mixin transition($params) {
+  -moz-transition:    $params;
+  -o-transition:      $params;
+  -webkit-transition: $params;
+  -ms-transition:     $params;
+  transition:         $params;
+}

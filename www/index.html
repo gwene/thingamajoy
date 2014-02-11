@@ -7,14 +7,53 @@
   <link rel="stylesheet" type="text/css" href="css/app.css" />
   <title>Thingamajoy</title>
 </head>
-<body>  
-  <div id="app">
-    <h1>Hello, World!</h1>
+<body>
+  
+  <div id="page0" class="page">
+    <div class="text">
+      <div class="title">Thingamajoy</div>
+      <div class="subtitle">By Brian Foo</div>
+      <div class="instructions">Read To Me?</div>
+      <button class="selected">Yes</button>
+      <button>No</button>
+    </div>
+    <div class="assets">
+      <div id="page0-ada" class="character"></div>
+    </div>
   </div>
   
+  <div id="page1" class="page">
+    <div class="text">
+      <p>Wait! I’m finishing something</p>
+      <p>Just give me one...</p>      
+      <p>Okay, I’m done!</p>
+    </div>
+    <div class="assets">
+      <div id="page1-ada" class="character"></div>
+    </div>
+  </div>
+  
+  <div id="page2" class="page">
+    <div class="text">
+      <p>You came right on time<br />
+      ...Almost...<br />
+      Just adding some wax and shine</p>
+      
+      <p>Don’t touch! It’s not a toy<br />
+      I call it The Thingamajoy</p>
+    </div>
+    <div class="assets">
+      <div id="page2-ada" class="character"></div>
+    </div>
+  </div>
+  
+  <a href="#settings" id="settings" class="action-link icon-cog"></a>
+  <a href="#next" id="next" class="action-link icon-arrow-right"></a>
+  
   <script type="text/javascript" src="phonegap.js"></script>
-  <script type="text/javascript" src="js/vendor/zepto.min.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/vendor/hammer.min.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery.pep.min.js"></script>
   <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>

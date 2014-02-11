@@ -1,5 +1,7 @@
-/* Colors */
-$grayDark: #333;
+@import "mixins";
+@import "variables";
+@import "keyframes";
+@import "fonts";
 
 /* Document */
 * {
@@ -23,10 +25,12 @@ body {
 
 /* Global Elements */
 a {
+  color: $blue;
   background: transparent;
   &:active,
   &:hover {
     outline: 0;
+    color: $blueLight;
   }
 }
 
@@ -38,33 +42,67 @@ img {
   border: 0;
 }
 
-/* App */
-#app {
-  display: none;
-  &.loaded {
+/* Pages */
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: $white;
+  @include opacity(0);
+  &.active {
     display: block;
-  } 
-}
-
-/* Portrait */
-@media screen and (orientation:portrait) {
-
-}
-
-/* Landscape */
-@media screen and (orientation:landscape) {
-
-}
-
-
-/* Mixins */
-@mixin clearfix {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
+    @include opacity(1);
+    z-index: 10;
   }
-  &:after {
-    clear: both;
+}
+.text, .assets {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  @media screen and (orientation: portrait) {
+    width: 100%;
+    height: 50%;
   }
+}
+.text {
+  left: 0;
+  top: 0;
+  padding-top: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  p {
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.assets {
+  right: 0;
+  top: 0;
+  @media screen and (orientation: portrait) {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.action-link {
+  display: block;
+  position: fixed;
+  z-index: 20;
+  text-decoration: none;
+  font-size: 2em;
+  color: $gray;
+  &:hover,
+  &:active {
+    color: $blueLight;
+  }
+}
+#settings {
+  left: 10px;
+  bottom: 10px;
+}
+#next {
+  right: 10px;
+  bottom: 10px;
 }
